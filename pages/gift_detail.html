@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kings Order</title>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+			integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
+			integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="../assets/js/common.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+			integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="../assets/css/common.css" />
+	</head>
+	<body>
+		<div class="ko">
+			<header class="ko-header">
+				<div class="ko-header__back"><a href="">뒤로가기</a></div>
+				<div class="ko-header__title">선물하기</div>
+				<div class="ko-header__mypage"><a href="mypage.html">마이페이지</a></div>
+			</header>
+			<div class="ko-giftdetail">
+				<div class="ko-giftdetail__form">
+					<h2 class="mt-2 mb-4 text-center">
+						김개똥
+						<button type="button">
+							<img src="../assets/images/refresh.svg" alt="" />
+						</button>
+					</h2>
+					<div class="ko-giftdetail__title mb-4">
+						<div>
+							<h6>가입일자<strong>2022.12.07</strong></h6>
+							<h6>보유 적립금<strong>5,000,000원</strong></h6>
+						</div>
+					</div>
+					<div class="ko-giftdetail__price">
+						<div class="row g-2">
+							<div class="col-4">
+								<button class="card" data-unit="1000" data-inde="increase">+1,000원</button>
+							</div>
+							<div class="col-4">
+								<button class="card" data-unit="10000" data-inde="increase">+10,000원</button>
+							</div>
+							<div class="col-4">
+								<button class="card" data-unit="100000" data-inde="increase">+100,000원</button>
+							</div>
+							<div class="col-4">
+								<button class="card" data-unit="1000" data-inde="decrease">-1,000원</button>
+							</div>
+							<div class="col-4">
+								<button class="card" data-unit="10000" data-inde="decrease">-10,000원</button>
+							</div>
+							<div class="col-4">
+								<button class="card" data-unit="100000" data-inde="decrease">-100,000원</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ko-giftdetail__button">
+					<p>
+						<strong>선물 보낼 적립금</strong>
+						<strong><span>0</span> 원</strong>
+					</p>
+					<button type="button" class="btn btn-primary btn-lg w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">보내기</button>
+				</div>
+			</div>
+
+			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">구매 확인</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<p class="m-5 text-center">
+								김개똥 님에게<br />
+								500,000 원<br />
+								선물하시겠습니까?
+							</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModalConfirm">확인</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="exampleModalConfirm" tabindex="-1" aria-labelledby="exampleModalConfirmLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalConfirmLabel">구매 확인</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<p class="m-5 text-center">선물이 완료되었습니다.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-bs-dismiss="modal">확인</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			var price = 0;
+			$(document).ready(function () {
+				$(".ko-giftdetail__price button").on("click", function () {
+					var unit = Number($(this).attr("data-unit"));
+					var inde = $(this).attr("data-inde");
+					if (inde === "increase") {
+						price += unit;
+					}
+					if (inde === "decrease") {
+						price -= unit;
+						if (price < 0) {
+							price = 0;
+						}
+					}
+					$(".ko-giftdetail__button strong span").text(price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+				});
+				$(".ko-giftdetail__title button").on("click", function () {
+					price = 0;
+					$(".ko-giftdetail__button strong span").text(price);
+				});
+			});
+		</script>
+	</body>
+</html>

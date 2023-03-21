@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kings Order</title>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+			integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
+			integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="../assets/js/common.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+			integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="../assets/css/common.css" />
+	</head>
+	<body>
+		<div class="ko">
+			<div class="ko-nickname">
+				<div class="ko__logo">
+					<img src="../assets/images/logo.png" alt="FAKER HOLDEM PUB" />
+				</div>
+				<div class="ko-nickname__form">
+					<form class="needs-validation" novalidate>
+						<div class="ko-nickname__input input-group-lg">
+							<input type="text" class="form-control" id="validation" required placeholder="닉네임을 입력해주세요.(중복불가)" />
+							<div class="invalid-feedback">중복된 닉네임이 있습니다. 닉네임을 변경해주세요.</div>
+						</div>
+						<div class="ko-nickname__button">
+							<button type="submit" class="btn btn-primary btn-lg w-100">확인</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script>
+			// Example starter JavaScript for disabling form submissions if there are invalid fields
+			(function () {
+				"use strict";
+
+				// Fetch all the forms we want to apply custom Bootstrap validation styles to
+				var forms = document.querySelectorAll(".needs-validation");
+
+				// Loop over them and prevent submission
+				Array.prototype.slice.call(forms).forEach(function (form) {
+					form.addEventListener(
+						"submit",
+						function (event) {
+							if (!form.checkValidity()) {
+								event.preventDefault();
+								event.stopPropagation();
+							}
+
+							form.classList.add("was-validated");
+						},
+						false
+					);
+				});
+			})();
+		</script>
+	</body>
+</html>

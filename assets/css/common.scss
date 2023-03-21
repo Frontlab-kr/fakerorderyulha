@@ -29,12 +29,12 @@
 	--vh: 100%;
 }
 body {
-	background: #2e1a1a;
+	background: #000;
 	touch-action: pan-x pan-y;
 }
 .ko {
 	font-family: "GmarketSansMedium";
-	background: #2e1a1a;
+	background: #000;
 	font-size: 18px;
 	color: #fff;
 	&-url {
@@ -61,7 +61,7 @@ body {
 		justify-content: space-between;
 		height: 80px;
 		padding: 0 20px;
-		background: #2e1a1a;
+		background: #000;
 		border-bottom: 1px solid #4b3b22;
 		color: #fff;
 		&__logo {
@@ -482,7 +482,7 @@ body {
 				height: 70px;
 				font-size: 18px;
 				padding: 0;
-				color: #2e1a1a;
+				color: #000;
 				// &:focus {
 				// 	background: #eee;
 				// }
@@ -619,7 +619,7 @@ body {
 			height: 40px;
 			background: #c9b7a0;
 			border: none;
-			color: #2e1a1a;
+			color: #000;
 		}
 		input {
 			width: 40px;
@@ -629,7 +629,7 @@ body {
 		}
 	}
 	&-black {
-		background: #2e1a1a;
+		background: #000;
 		color: #fff;
 	}
 	&-black & {
@@ -698,7 +698,7 @@ body {
 .btn-secondary {
 	background-color: #e2be82 !important;
 	border-color: #e2be82 !important;
-	color: #2e1a1a !important;
+	color: #000 !important;
 }
 .btn-lg {
 	padding-top: 14px;
@@ -731,5 +731,5 @@ body {
 }
 
 .modal {
-	color: #2e1a1a;
+	color: #000;
 }

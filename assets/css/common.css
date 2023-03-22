@@ -275,7 +275,7 @@ body {
 }
 
 .ko-qr__form > p {
-  color: #c9b7a0;
+  color: #bcbcbc;
 }
 
 .ko-qr__canvas {
@@ -420,7 +420,7 @@ body {
   margin-bottom: 14px;
   font-weight: 500;
   font-size: 18px;
-  color: #c9b7a0;
+  color: #bcbcbc;
 }
 
 .ko-main__text dl dd {
@@ -494,7 +494,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   letter-spacing: -0.03em;
-  color: #c9b7a0;
+  color: #bcbcbc;
 }
 
 .ko-order__title dl dd {
@@ -530,7 +530,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   letter-spacing: -0.03em;
-  color: #c9b7a0;
+  color: #bcbcbc;
 }
 
 .ko-order__button p strong:last-child {
@@ -562,6 +562,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .ko-gift__form form {
@@ -653,7 +654,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  color: #c9b7a0;
+  color: #bcbcbc;
 }
 
 .ko-giftdetail__title h6 strong {
@@ -710,7 +711,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   letter-spacing: -0.03em;
-  color: #c9b7a0;
+  color: #bcbcbc;
 }
 
 .ko-giftdetail__button p strong:last-child {
@@ -815,7 +816,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  color: #c9b7a0;
+  color: #bcbcbc;
 }
 
 .ko-mypage__title h6 strong {
@@ -844,12 +845,13 @@ body {
 
 .ko-mypage__button {
   margin-top: auto;
+  padding-top: 30px;
 }
 
 .ko-mypage__button .btn {
-  background-color: #524037 !important;
-  border-color: #524037 !important;
-  color: #c9b7a0 !important;
+  background-color: #48ef59 !important;
+  border-color: #48ef59 !important;
+  color: #000 !important;
 }
 
 .ko-inde {
@@ -864,7 +866,7 @@ body {
 .ko-inde button {
   width: 40px;
   height: 40px;
-  background: #c9b7a0;
+  background: #bcbcbc;
   border: none;
   color: #000;
 }
@@ -933,14 +935,14 @@ body {
 }
 
 .btn-primary {
-  background-color: #81673d !important;
-  border-color: #81673d !important;
-  color: #ffeac8 !important;
+  background-color: #48ef59 !important;
+  border-color: #48ef59 !important;
+  color: #000 !important;
 }
 
 .btn-secondary {
-  background-color: #e2be82 !important;
-  border-color: #e2be82 !important;
+  background-color: #c4ef48 !important;
+  border-color: #c4ef48 !important;
   color: #000 !important;
 }
 
@@ -958,7 +960,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   letter-spacing: -0.03em;
-  color: #c9b7a0;
+  color: #bcbcbc;
 }
 
 .text-sav {
@@ -979,4 +981,12 @@ body {
 
 .modal {
   color: #000;
+}
+
+.text-success {
+  color: #48ef59 !important;
+}
+
+.text-danger {
+  color: #ff0000 !important;
 }
